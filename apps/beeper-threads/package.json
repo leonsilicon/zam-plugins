@@ -1,0 +1,9 @@
+{
+  "name": "@-apps/beeper-threads",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@-/com.leonsilicon.zam-plugins.beeper-threads": "workspace:*"
+  }
+}

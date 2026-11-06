@@ -1,0 +1,16 @@
+{
+  "name": "@-/com.leonsilicon.zam-plugins.beeper-threads",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#client-patch": "./client-patch.ts",
+    "#relations-fallback": "./relations-fallback.ts"
+  },
+  "exports": {
+    ".": "./+.ts"
+  },
+  "devDependencies": {
+    "@-/com.npmjs.matrix-js-sdk": "workspace:*"
+  }
+}

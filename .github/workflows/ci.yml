@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Installs Vite+ (version from the catalog), Node, and Bun, then runs `vp install`.
+      - uses: voidzero-dev/setup-vp@68f39c78aaf39be468cabd2afb09c162574c84af # v1.21.2
+        with:
+          node-version: "24"
+          cache: true
+      - run: vp check
+      - run: vp run -w typecheck
+      - run: vp run -w test
+      # Zam installs the committed bundles, so they must match the source.
+      - run: vp run -w build
+      - run: git diff --exit-code -- apps

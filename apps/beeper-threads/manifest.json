@@ -1,0 +1,10 @@
+{
+  "id": "com.leonsilicon.beeper-threads",
+  "name": "Beeper threads",
+  "version": "0.1.0",
+  "description": "Shows thread replies in Beeper's bridged rooms, where Beeper's server refuses the Matrix thread endpoints.",
+  "author": "Leon Si",
+  "entry": "plugin.js",
+  "minAppVersion": "1.54.0",
+  "capabilities": ["unsafe"]
+}

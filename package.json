@@ -1,0 +1,38 @@
+{
+  "name": "zam-plugins",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Custom plugins for the Zam Matrix client.",
+  "author": "Leon Si",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonsilicon/zam-plugins.git"
+  },
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/**"
+    ],
+    "catalog": {
+      "matrix-js-sdk": "45.0.0",
+      "@types/node": "24.19.2",
+      "typescript": "7.0.2",
+      "vite-plus": "1.5.0",
+      "eslint-plugin-flatcap": "0.1.0"
+    }
+  },
+  "type": "module",
+  "scripts": {},
+  "devDependencies": {
+    "@-/com.leonsilicon.zam-plugins.builder": "workspace:*",
+    "@-apps/beeper-threads": "workspace:*",
+    "@types/node": "catalog:",
+    "eslint-plugin-flatcap": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "bun@1.4.4"
+}

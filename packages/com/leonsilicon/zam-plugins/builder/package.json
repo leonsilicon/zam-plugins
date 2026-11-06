@@ -1,0 +1,15 @@
+{
+  "name": "@-/com.leonsilicon.zam-plugins.builder",
+  "version": "0.0.0",
+  "private": true,
+  "bin": {
+    "_build-plugins": "./_build-plugins.ts"
+  },
+  "type": "module",
+  "imports": {
+    "#plugin-index": "./plugin-index.ts"
+  },
+  "exports": {
+    ".": "./+.ts"
+  }
+}
